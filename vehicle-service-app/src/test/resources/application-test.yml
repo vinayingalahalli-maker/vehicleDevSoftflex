@@ -1,0 +1,8 @@
+# Test profile — SDK bean is mocked in tests, so no real base-url is needed.
+vehicle:
+  sdk:
+    base-url: http://localhost:9999
+
+logging:
+  level:
+    com.vehicleservice: WARN

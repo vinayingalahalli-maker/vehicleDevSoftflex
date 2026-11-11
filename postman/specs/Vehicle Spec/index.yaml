@@ -1,0 +1,654 @@
+openapi: 3.0.0
+info:
+  title: Vehicle Service Collection
+  version: 1.0.0
+  description: >-
+    # Vehicle Service Collection
+
+
+    The Vehicle Service API provides a set of RESTful endpoints for managing
+    vehicles. It supports full CRUD (Create, Read, Update, Delete) operations on
+    vehicle records.
+
+
+    ## Base URL
+
+    All endpoints use the `{{baseUrl}}` variable. Ensure the active environment
+    has `baseUrl` configured correctly.
+
+
+    ## Endpoints Overview
+
+
+    | Method | Endpoint | Description |
+
+    |--------|----------|-------------|
+
+    | POST | /vehicles | Create a new vehicle |
+
+    | GET | /vehicles | Retrieve all vehicles |
+
+    | GET | /vehicles/:id | Retrieve a specific vehicle |
+
+    | PATCH | /vehicles/:id | Update a vehicle |
+
+    | DELETE | /vehicles/:id | Delete a vehicle |
+
+
+    ## Common Headers
+
+    - `Content-Type: application/json` — Required for requests with a body
+
+    - `Accept: application/json` — Expected response format
+servers:
+  - url: '{{baseUrl}}'
+paths:
+  /vehicles:
+    get:
+      summary: Get all vehicles
+      responses:
+        '200':
+          description: 200 - Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    nickName:
+                      type: string
+                    vin:
+                      type: string
+                    make:
+                      type: string
+                    model:
+                      type: string
+                    year:
+                      type: string
+                      format: utc-millisec
+                    miles:
+                      type: integer
+              example:
+                - id: 1
+                  nickName: The Lisa Marie
+                  vin: 4M2DV11W4RDJ53329
+                  make: Mercury
+                  model: Villager
+                  year: '1994'
+                  miles: 159864
+                - id: 2
+                  nickName: Dolly
+                  vin: JN8AZ2KR1AT169594
+                  make: Nissan
+                  model: Cube
+                  year: '2010'
+                  miles: 59000
+        '500':
+          description: 500 - Unexpected error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: An unexpected error occurred.
+      description: >-
+        ## Get All Vehicles
+
+
+        Retrieves a list of all vehicle records stored in the system.
+
+
+        **Method:** `GET`  
+
+        **Endpoint:** `{{baseUrl}}/vehicles`
+
+
+        ### Request Headers
+
+        | Header | Value | Description |
+
+        |--------|-------|-------------|
+
+        | Accept | application/json | Expected response format. |
+
+
+        ### Request Body
+
+        None required.
+
+
+        ### Responses
+
+        | Status Code | Description |
+
+        |-------------|-------------|
+
+        | 200 | Success — returns an array of vehicle objects. |
+
+        | 500 | Unexpected server error. |
+
+
+        ### Example Response (200 - Success)
+
+        Returns a JSON array of vehicle objects, each containing fields such as
+        `id`, `nickName`, `vin`, `make`, `model`, `year`, and `miles`.
+    post:
+      summary: Create a vehicle
+      parameters:
+        - name: x-mock-response-code
+          in: header
+          schema:
+            type: integer
+          example: 500
+      responses:
+        '201':
+          description: 201 - Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  nickName:
+                    type: string
+                  vin:
+                    type: string
+                  make:
+                    type: string
+                  model:
+                    type: string
+                  year:
+                    type: string
+                  miles:
+                    type: string
+                  city:
+                    type: string
+                  fullname:
+                    type: string
+              example:
+                id: 1
+                nickName: The Lisa Marie
+                vin: 4M2DV11W4RDJ53329
+                make: Mercury
+                model: Villager
+                year: '1994'
+                miles: 159,864
+        '400':
+          description: 400 - Missing required attribute
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: 'Request body missing required attribute: vin'
+        '409':
+          description: 409 - Vehicle already exists
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: >-
+                  Vehicle with VIN JN8AZ2KR1AT169594 already exists. Existing
+                  vehicle ID: 2
+        '500':
+          description: 500 - Unexpected error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: An unexpected error occurred.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nickName:
+                  type: string
+                vin:
+                  type: string
+                make:
+                  type: string
+                model:
+                  type: string
+                year:
+                  type: string
+                miles:
+                  type: integer
+            example:
+              nickName: The Lisa Marie
+              vin: 4M2DV11W4RDJ53329
+              make: Mercury
+              model: Villager
+              year: '1994'
+              miles: 159864
+      description: >-
+        ## Create a Vehicle
+
+
+        Creates a new vehicle record in the system.
+
+
+        **Method:** `POST`  
+
+        **Endpoint:** `{{baseUrl}}/vehicles`
+
+
+        ### Request Headers
+
+        | Header | Value | Description |
+
+        |--------|-------|-------------|
+
+        | Content-Type | application/json | Required. Specifies the request body
+        format. |
+
+        | Accept | application/json | Expected response format. |
+
+
+        ### Request Body
+
+        Send a JSON object with the following fields:
+
+
+        | Field | Type | Required | Description |
+
+        |-------|------|----------|-------------|
+
+        | nickName | string | Yes | A friendly name for the vehicle. |
+
+        | vin | string | Yes | Vehicle Identification Number (17 characters). |
+
+        | make | string | Yes | Manufacturer of the vehicle (e.g., Mercury). |
+
+        | model | string | Yes | Model name of the vehicle (e.g., Villager). |
+
+        | year | string | Yes | Manufacturing year of the vehicle (e.g.,
+        "1994"). |
+
+        | miles | number | Yes | Current odometer reading in miles. |
+
+
+        **Example Request Body:**
+
+        ```json
+
+        {
+          "nickName": "The Lisa Marie",
+          "vin": "4M2DV11W4RDJ53329",
+          "make": "Mercury",
+          "model": "Villager",
+          "year": "1994",
+          "miles": 159864
+        }
+
+        ```
+
+
+        ### Responses
+
+        | Status Code | Description |
+
+        |-------------|-------------|
+
+        | 201 | Vehicle successfully created. Returns the created vehicle
+        object. |
+
+        | 400 | Bad request — one or more required attributes are missing or
+        invalid. |
+
+        | 409 | Conflict — a vehicle with the same VIN already exists. |
+
+        | 500 | Unexpected server error. |
+  /vehicles/{id}:
+    get:
+      summary: Retrieve a vehicle
+      responses:
+        '200':
+          description: 200 - Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  nickName:
+                    type: string
+                  vin:
+                    type: string
+                  make:
+                    type: string
+                  model:
+                    type: string
+                  year:
+                    type: string
+                  miles:
+                    type: integer
+              example:
+                id: 1
+                nickName: The Lisa Marie
+                vin: 4M2DV11W4RDJ53329
+                make: Mercury
+                model: Villager
+                year: '1994'
+                miles: 159864
+        '404':
+          description: 404 - Not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: 'Vehicle with id: 0 not found.'
+        '500':
+          description: 500 - Unexpected error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: An unexpected error occurred.
+      description: >-
+        ## Retrieve a Vehicle
+
+
+        Fetches the details of a single vehicle by its unique identifier.
+
+
+        **Method:** `GET`  
+
+        **Endpoint:** `{{baseUrl}}/vehicles/:id`
+
+
+        ### Path Parameters
+
+        | Parameter | Type | Required | Description |
+
+        |-----------|------|----------|-------------|
+
+        | id | string | Yes | The unique identifier of the vehicle to retrieve.
+        |
+
+
+        ### Request Headers
+
+        | Header | Value | Description |
+
+        |--------|-------|-------------|
+
+        | Accept | application/json | Expected response format. |
+
+
+        ### Request Body
+
+        None required.
+
+
+        ### Responses
+
+        | Status Code | Description |
+
+        |-------------|-------------|
+
+        | 200 | Success — returns the vehicle object matching the given ID. |
+
+        | 404 | Not found — no vehicle exists with the specified ID. |
+
+        | 500 | Unexpected server error. |
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+        example: 1
+    patch:
+      summary: Update a collection
+      responses:
+        '200':
+          description: 200 - Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  nickName:
+                    type: string
+                  vin:
+                    type: string
+                  make:
+                    type: string
+                  model:
+                    type: string
+                  year:
+                    type: string
+                  miles:
+                    type: integer
+              example:
+                id: 1
+                nickName: The Lisa Marie
+                vin: 4M2DV11W4RDJ53329
+                make: Mercury
+                model: Villager
+                year: '1994'
+                miles: 159999
+        '400':
+          description: 400 - Bad request body
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: Bad request body.
+        '500':
+          description: 500 - Unexpected error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: An unexpected error occurred.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nickName:
+                  type: string
+                vin:
+                  type: string
+                make:
+                  type: string
+                model:
+                  type: string
+                year:
+                  type: string
+                miles:
+                  type: integer
+            example:
+              nickName: The Lisa Marie
+              vin: 4M2DV11W4RDJ53329
+              make: Mercury
+              model: Villager
+              year: '1994'
+              miles: 159999
+      description: >-
+        ## Update a Vehicle
+
+
+        Partially updates an existing vehicle record using its unique
+        identifier. Only the fields provided in the request body will be
+        updated.
+
+
+        **Method:** `PATCH`  
+
+        **Endpoint:** `{{baseUrl}}/vehicles/:id`
+
+
+        ### Path Parameters
+
+        | Parameter | Type | Required | Description |
+
+        |-----------|------|----------|-------------|
+
+        | id | string | Yes | The unique identifier of the vehicle to update. |
+
+
+        ### Request Headers
+
+        | Header | Value | Description |
+
+        |--------|-------|-------------|
+
+        | Content-Type | application/json | Required. Specifies the request body
+        format. |
+
+        | Accept | application/json | Expected response format. |
+
+
+        ### Request Body
+
+        Send a JSON object with one or more of the following fields to update:
+
+
+        | Field | Type | Required | Description |
+
+        |-------|------|----------|-------------|
+
+        | nickName | string | No | Updated friendly name for the vehicle. |
+
+        | vin | string | No | Updated Vehicle Identification Number. |
+
+        | make | string | No | Updated manufacturer name. |
+
+        | model | string | No | Updated model name. |
+
+        | year | string | No | Updated manufacturing year. |
+
+        | miles | number | No | Updated odometer reading in miles. |
+
+
+        **Example Request Body:**
+
+        ```json
+
+        {
+          "nickName": "The Lisa Marie",
+          "vin": "4M2DV11W4RDJ53329",
+          "make": "Mercury",
+          "model": "Villager",
+          "year": "1994",
+          "miles": 159999
+        }
+
+        ```
+
+
+        ### Responses
+
+        | Status Code | Description |
+
+        |-------------|-------------|
+
+        | 200 | Success — returns the updated vehicle object. |
+
+        | 400 | Bad request — the request body is malformed or contains invalid
+        values. |
+
+        | 500 | Unexpected server error. |
+    delete:
+      summary: Delete a vehicle
+      responses:
+        '204':
+          description: 204 - Success
+        '500':
+          description: 500 - Unexpected error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+              example:
+                message: An unexpected error occurred.
+      description: >-
+        ## Delete a Vehicle
+
+
+        Permanently removes a vehicle record from the system using its unique
+        identifier.
+
+
+        **Method:** `DELETE`  
+
+        **Endpoint:** `{{baseUrl}}/vehicles/:id`
+
+
+        ### Path Parameters
+
+        | Parameter | Type | Required | Description |
+
+        |-----------|------|----------|-------------|
+
+        | id | string | Yes | The unique identifier of the vehicle to delete. |
+
+
+        ### Request Headers
+
+        | Header | Value | Description |
+
+        |--------|-------|-------------|
+
+        | Accept | application/json | Expected response format. |
+
+
+        ### Request Body
+
+        None required.
+
+
+        ### Responses
+
+        | Status Code | Description |
+
+        |-------------|-------------|
+
+        | 204 | Success — vehicle deleted. No content returned. |
+
+        | 500 | Unexpected server error. |

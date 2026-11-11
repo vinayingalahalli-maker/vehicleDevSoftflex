@@ -1,0 +1,20 @@
+id: 01a1c99e-9f67-70ca-8523-7748ac4be929
+version: 1
+name: Vehicle Service Local Mock
+slug: new-mock-e7c64
+enableSession: true
+protocol: http
+port: 5001
+autoRestartOnChange: true
+logging:
+  level: verbose
+  showBody: true
+associations:
+  - entityType: collection
+    entityId: 6Af829eeBc559cA5cCfcE7f6
+    relation: source
+    syncEnabled: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

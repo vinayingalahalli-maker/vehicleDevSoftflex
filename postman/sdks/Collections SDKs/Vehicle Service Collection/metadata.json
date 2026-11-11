@@ -1,0 +1,144 @@
+{
+  "entityId": "6Af829eeBc559cA5cCfcE7f6",
+  "entityType": "collections",
+  "buildId": 88211,
+  "createdAt": "2026-11-11T08:12:16.757Z",
+  "downloads": [
+    {
+      "language": "typescript",
+      "status": "success",
+      "createdAt": "2026-11-11T08:12:16.766Z",
+      "link": "https://us-prod-sdk-gen-api-code-gen-uploads.s3.us-east-1.amazonaws.com/11565412-cb12-4db1-8c13-86d5f18ac2f6/vehicle-service-collection-sdk-typescript-1.0.0.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LJBU7CNMDSGDL%2F20261111%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261111T081228Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCICMu1PpnElTQZrHNomZ%2BrpsFEg7bpnnmSu%2FOhJtVh4koAiEA9RirCIy85QmFj7RWx7ffvPIzpG6uMhrG%2BXfTzD%2BHPzQqkwUIURAAGgw2Mzc0MjM2NTIxNTgiDBoQW4OtotFsWLTFMSrwBOjcGHXjechwwOszKi%2BWoxq9vpqLEOe%2BsftM8Gsnx5YYotm%2BqlIc4kk7sZOWkhfU2vkU6%2FutSbXthl2lqqJ3CSdCjHJwqlJSnStXgrnMoZP8TsehWRJemxtb5xC3KC3EAMiP9rR7JCsqFdhAg7LuuTPuALcoyrv60mSbUZFnHpkSRU%2BqDxD9ABBlsHwSUb517%2F1GvhqbsAMmEX%2FdoTYk9QdywTaxD7tfwiUJS0hnNOfSQ3hVRV2fzYzIUNQZxl%2Bcgik3zD2AzzbM4tiTnfk1%2BuA6Q9EoDdk7OzCG502Co5ljAg3pOFau4%2BCOAKzWOinD4hLtim6XKEIrmJ4swbeJ7idGv1NWVUhd47IQ3cedbWs2xNz9oM6pbuF6nIYUNHlDNhqqFHPNZyBKhB1qSavdzK30IaIJo3gJsGQ3Q3gut%2BrMmy9gWq9LFLZIQv4zH5idAwzeD74u033wDEWnF63ARoZEQgcn5Ybo77FD4V9w1XZPw2CkiwTrwtpaNvyZH4PEMUYRnODXa%2FRUHCAT0NPtUtjOd55yLdhOk9jFiBAq9c2YB4MrZXhVDF7G2IYOUVKwLOE3%2FUm7i8I262J4ILgxyv2UEcybwv1%2BrSP%2F6egfzRiaWTw9BcwuoSjkULQpunH4puayk%2FVX3g%2BtDYLVzAQmc1LvXxbVEyAyVpK5%2BO5DIB2ewTZVn9A%2FPd9wao9jWY0n9%2FKo9qGHo1lmjkajXhnYn8kd%2FLc9lqD2ncg%2B5V8yfJW1So02l%2FfQPSetL3RdE%2F%2BpkmDcLH1cCY5ZBEdJjtXqwxYj9GjVr99dAK%2FPxNrmqann1aPXWuGdhcX%2F7BeK6rPiMzDdxNDXBjqZAdimxYcyUzfHPrK8yUPUqy%2BpjUy0ttp37MAFFMz0CNCLIctbWQ4KuMJXWBJSmCxkiOjbOwDdesG2%2FNk%2F%2FdwcWjk1qBZlYgeDD0GL2baNw37XNdFWVMzlBLeRR%2FVeN%2BPVSWz0EfBRpSfGN%2BDgEwdG1EZPkGnXkCAug0%2F0UbEk4LExb0iAqKqKCnYDJTs9H4nHWOb1jEIKowAvWw%3D%3D&X-Amz-Signature=b4f4bbb0f90209aef1536e62c6d9414f3b5ab0dd068859989628576292ae99ef&X-Amz-SignedHeaders=host&x-id=GetObject",
+      "contentHash": "60327ee6d4f78bd6be5d7afed9b7aba8108081a30a9e1acaee02d8305b4d5a85",
+      "logs": [
+        {
+          "message": "Mapped API: 1 service, 5 operations, 1 model, 1 auth scheme.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:22.678Z"
+        },
+        {
+          "message": "Mapped models: 1.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:22.678Z"
+        },
+        {
+          "message": "Mapped services: 1 service, 5 operations.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:22.678Z"
+        },
+        {
+          "message": "Authentication schemes: 1.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:22.678Z"
+        },
+        {
+          "message": "Generating TypeScript SDK.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:22.678Z"
+        },
+        {
+          "message": "Rendered 50 pre-delivery SDK files.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:22.678Z"
+        }
+      ]
+    },
+    {
+      "language": "python",
+      "status": "success",
+      "createdAt": "2026-11-11T08:12:16.767Z",
+      "link": "https://us-prod-sdk-gen-api-code-gen-uploads.s3.us-east-1.amazonaws.com/fc24299b-c798-4b6f-aec5-097e865ebfb7/vehicle-service-collection-sdk-python-1.0.0.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LJBU7CNMDSGDL%2F20261111%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261111T081228Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCICMu1PpnElTQZrHNomZ%2BrpsFEg7bpnnmSu%2FOhJtVh4koAiEA9RirCIy85QmFj7RWx7ffvPIzpG6uMhrG%2BXfTzD%2BHPzQqkwUIURAAGgw2Mzc0MjM2NTIxNTgiDBoQW4OtotFsWLTFMSrwBOjcGHXjechwwOszKi%2BWoxq9vpqLEOe%2BsftM8Gsnx5YYotm%2BqlIc4kk7sZOWkhfU2vkU6%2FutSbXthl2lqqJ3CSdCjHJwqlJSnStXgrnMoZP8TsehWRJemxtb5xC3KC3EAMiP9rR7JCsqFdhAg7LuuTPuALcoyrv60mSbUZFnHpkSRU%2BqDxD9ABBlsHwSUb517%2F1GvhqbsAMmEX%2FdoTYk9QdywTaxD7tfwiUJS0hnNOfSQ3hVRV2fzYzIUNQZxl%2Bcgik3zD2AzzbM4tiTnfk1%2BuA6Q9EoDdk7OzCG502Co5ljAg3pOFau4%2BCOAKzWOinD4hLtim6XKEIrmJ4swbeJ7idGv1NWVUhd47IQ3cedbWs2xNz9oM6pbuF6nIYUNHlDNhqqFHPNZyBKhB1qSavdzK30IaIJo3gJsGQ3Q3gut%2BrMmy9gWq9LFLZIQv4zH5idAwzeD74u033wDEWnF63ARoZEQgcn5Ybo77FD4V9w1XZPw2CkiwTrwtpaNvyZH4PEMUYRnODXa%2FRUHCAT0NPtUtjOd55yLdhOk9jFiBAq9c2YB4MrZXhVDF7G2IYOUVKwLOE3%2FUm7i8I262J4ILgxyv2UEcybwv1%2BrSP%2F6egfzRiaWTw9BcwuoSjkULQpunH4puayk%2FVX3g%2BtDYLVzAQmc1LvXxbVEyAyVpK5%2BO5DIB2ewTZVn9A%2FPd9wao9jWY0n9%2FKo9qGHo1lmjkajXhnYn8kd%2FLc9lqD2ncg%2B5V8yfJW1So02l%2FfQPSetL3RdE%2F%2BpkmDcLH1cCY5ZBEdJjtXqwxYj9GjVr99dAK%2FPxNrmqann1aPXWuGdhcX%2F7BeK6rPiMzDdxNDXBjqZAdimxYcyUzfHPrK8yUPUqy%2BpjUy0ttp37MAFFMz0CNCLIctbWQ4KuMJXWBJSmCxkiOjbOwDdesG2%2FNk%2F%2FdwcWjk1qBZlYgeDD0GL2baNw37XNdFWVMzlBLeRR%2FVeN%2BPVSWz0EfBRpSfGN%2BDgEwdG1EZPkGnXkCAug0%2F0UbEk4LExb0iAqKqKCnYDJTs9H4nHWOb1jEIKowAvWw%3D%3D&X-Amz-Signature=049abcb72c2eeff1b48639e59e4c7412be1f5df7f8380e59404697ae31491275&X-Amz-SignedHeaders=host&x-id=GetObject",
+      "contentHash": "5529f1e0aa9a4f074ff068e68c343e5bb212fc92a3919560bd50ecc13b4e2e15",
+      "logs": [
+        {
+          "message": "Mapped API: 1 service, 5 operations, 1 model, 1 auth scheme.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:22.025Z"
+        },
+        {
+          "message": "Mapped models: 1.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:22.025Z"
+        },
+        {
+          "message": "Mapped services: 1 service, 5 operations.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:22.025Z"
+        },
+        {
+          "message": "Authentication schemes: 1.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:22.025Z"
+        },
+        {
+          "message": "Generating Python SDK.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:22.025Z"
+        },
+        {
+          "message": "Rendered 59 pre-delivery SDK files.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:22.025Z"
+        }
+      ]
+    },
+    {
+      "language": "java",
+      "status": "success",
+      "createdAt": "2026-11-11T08:12:16.767Z",
+      "link": "https://us-prod-sdk-gen-api-code-gen-uploads.s3.us-east-1.amazonaws.com/40110c33-2e4e-4eb0-9991-a5e907440e70/vehicle-service-collection-sdk-java-1.0.0.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LJBU7CNMDSGDL%2F20261111%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261111T081228Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCICMu1PpnElTQZrHNomZ%2BrpsFEg7bpnnmSu%2FOhJtVh4koAiEA9RirCIy85QmFj7RWx7ffvPIzpG6uMhrG%2BXfTzD%2BHPzQqkwUIURAAGgw2Mzc0MjM2NTIxNTgiDBoQW4OtotFsWLTFMSrwBOjcGHXjechwwOszKi%2BWoxq9vpqLEOe%2BsftM8Gsnx5YYotm%2BqlIc4kk7sZOWkhfU2vkU6%2FutSbXthl2lqqJ3CSdCjHJwqlJSnStXgrnMoZP8TsehWRJemxtb5xC3KC3EAMiP9rR7JCsqFdhAg7LuuTPuALcoyrv60mSbUZFnHpkSRU%2BqDxD9ABBlsHwSUb517%2F1GvhqbsAMmEX%2FdoTYk9QdywTaxD7tfwiUJS0hnNOfSQ3hVRV2fzYzIUNQZxl%2Bcgik3zD2AzzbM4tiTnfk1%2BuA6Q9EoDdk7OzCG502Co5ljAg3pOFau4%2BCOAKzWOinD4hLtim6XKEIrmJ4swbeJ7idGv1NWVUhd47IQ3cedbWs2xNz9oM6pbuF6nIYUNHlDNhqqFHPNZyBKhB1qSavdzK30IaIJo3gJsGQ3Q3gut%2BrMmy9gWq9LFLZIQv4zH5idAwzeD74u033wDEWnF63ARoZEQgcn5Ybo77FD4V9w1XZPw2CkiwTrwtpaNvyZH4PEMUYRnODXa%2FRUHCAT0NPtUtjOd55yLdhOk9jFiBAq9c2YB4MrZXhVDF7G2IYOUVKwLOE3%2FUm7i8I262J4ILgxyv2UEcybwv1%2BrSP%2F6egfzRiaWTw9BcwuoSjkULQpunH4puayk%2FVX3g%2BtDYLVzAQmc1LvXxbVEyAyVpK5%2BO5DIB2ewTZVn9A%2FPd9wao9jWY0n9%2FKo9qGHo1lmjkajXhnYn8kd%2FLc9lqD2ncg%2B5V8yfJW1So02l%2FfQPSetL3RdE%2F%2BpkmDcLH1cCY5ZBEdJjtXqwxYj9GjVr99dAK%2FPxNrmqann1aPXWuGdhcX%2F7BeK6rPiMzDdxNDXBjqZAdimxYcyUzfHPrK8yUPUqy%2BpjUy0ttp37MAFFMz0CNCLIctbWQ4KuMJXWBJSmCxkiOjbOwDdesG2%2FNk%2F%2FdwcWjk1qBZlYgeDD0GL2baNw37XNdFWVMzlBLeRR%2FVeN%2BPVSWz0EfBRpSfGN%2BDgEwdG1EZPkGnXkCAug0%2F0UbEk4LExb0iAqKqKCnYDJTs9H4nHWOb1jEIKowAvWw%3D%3D&X-Amz-Signature=ba0a99c02748e714ec63bd747100e5a1d8741026ade884b631b52e9257df66b2&X-Amz-SignedHeaders=host&x-id=GetObject",
+      "contentHash": "02cfba5ce6c05764d66e9d79603471813aacad8c2b3d3bc650832e0dac1ac2e9",
+      "logs": [
+        {
+          "message": "Mapped API: 1 service, 5 operations, 1 model, 1 auth scheme.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:24.449Z"
+        },
+        {
+          "message": "Mapped models: 1.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:24.449Z"
+        },
+        {
+          "message": "Mapped services: 1 service, 5 operations.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:24.449Z"
+        },
+        {
+          "message": "Authentication schemes: 1.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:24.449Z"
+        },
+        {
+          "message": "Generating Java SDK.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:24.449Z"
+        },
+        {
+          "message": "Rendered 68 pre-delivery SDK files.",
+          "severity": "INFO",
+          "path": null,
+          "createdAt": "2026-11-11T08:12:24.449Z"
+        }
+      ]
+    }
+  ],
+  "sdkName": "vehicle-service-collection-sdk"
+}

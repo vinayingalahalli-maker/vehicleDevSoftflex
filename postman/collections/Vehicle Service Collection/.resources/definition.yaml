@@ -1,0 +1,37 @@
+$kind: collection
+description: |-
+  # Vehicle Service Collection
+
+  The Vehicle Service API provides a set of RESTful endpoints for managing vehicles. It supports full CRUD (Create, Read, Update, Delete) operations on vehicle records.
+
+  ## Base URL
+  All endpoints use the `{{baseUrl}}` variable. Ensure the active environment has `baseUrl` configured correctly.
+
+  ## Endpoints Overview
+
+  | Method | Endpoint | Description |
+  |--------|----------|-------------|
+  | POST | /vehicles | Create a new vehicle |
+  | GET | /vehicles | Retrieve all vehicles |
+  | GET | /vehicles/:id | Retrieve a specific vehicle |
+  | PATCH | /vehicles/:id | Update a vehicle |
+  | DELETE | /vehicles/:id | Delete a vehicle |
+
+  ## Common Headers
+  - `Content-Type: application/json` — Required for requests with a body
+  - `Accept: application/json` — Expected response format
+variables:
+  baseUrl: "{{baseUrl}}"
+scripts:
+  - type: http:afterResponse
+    code: |-
+      pm.test("Status code is 200 or 201", function () {
+          pm.expect(pm.response.code).to.be.oneOf([200,201]);
+      });
+    language: text/javascript
+auth:
+  - id: 9802a8df-ab82-430e-a5c5-192414d1179e
+    type: apikey
+    name: apikey auth
+    credentials:
+      key: X-API-Key

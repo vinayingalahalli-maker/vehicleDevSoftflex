@@ -1,0 +1,5 @@
+name: Vehicle Service Local Mock Environment
+values:
+  - key: baseUrl
+    value: 'http://localhost:5001'
+color: 240

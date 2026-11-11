@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: vehicle-service-app
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+
+# Vehicle Service SDK configuration
+# Override vehicle.sdk.base-url to point at staging / production backends.
+# Default targets the local Postman mock server.
+vehicle:
+  sdk:
+    base-url: http://localhost:3000
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+# SpringDoc / Swagger UI
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+
+logging:
+  level:
+    com.vehicleservice: DEBUG
+    com.vehicleservicecollectionsdk: INFO

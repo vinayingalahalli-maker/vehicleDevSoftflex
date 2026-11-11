@@ -1,0 +1,32 @@
+$kind: http-request
+description: |-
+  ## Get All Vehicles
+
+  Retrieves a list of all vehicle records stored in the system.
+
+  **Method:** `GET`  
+  **Endpoint:** `{{baseUrl}}/vehicles`
+
+  ### Request Headers
+  | Header | Value | Description |
+  |--------|-------|-------------|
+  | Accept | application/json | Expected response format. |
+
+  ### Request Body
+  None required.
+
+  ### Responses
+  | Status Code | Description |
+  |-------------|-------------|
+  | 200 | Success — returns an array of vehicle objects. |
+  | 500 | Unexpected server error. |
+
+  ### Example Response (200 - Success)
+  Returns a JSON array of vehicle objects, each containing fields such as `id`, `nickName`, `vin`, `make`, `model`, `year`, and `miles`.
+url: "{{baseUrl}}/vehicles"
+method: GET
+headers:
+  Accept: application/json
+settings: {}
+examples: ./.resources/Get all vehicles.resources/examples
+order: 5000

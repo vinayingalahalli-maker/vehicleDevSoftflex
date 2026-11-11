@@ -1,0 +1,49 @@
+$kind: http-request
+description: |-
+  ## Delete a Vehicle
+
+  Permanently removes a vehicle record from the system using its unique identifier.
+
+  **Method:** `DELETE`  
+  **Endpoint:** `{{baseUrl}}/vehicles/:id`
+
+  ### Path Parameters
+  | Parameter | Type | Required | Description |
+  |-----------|------|----------|-------------|
+  | id | string | Yes | The unique identifier of the vehicle to delete. |
+
+  ### Request Headers
+  | Header | Value | Description |
+  |--------|-------|-------------|
+  | Accept | application/json | Expected response format. |
+
+  ### Request Body
+  None required.
+
+  ### Responses
+  | Status Code | Description |
+  |-------------|-------------|
+  | 204 | Success — vehicle deleted. No content returned. |
+  | 500 | Unexpected server error. |
+url: "{{baseUrl}}/vehicles/:id"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: "1"
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+settings: {}
+examples: ./.resources/Delete a vehicle.resources/examples
+order: 4000

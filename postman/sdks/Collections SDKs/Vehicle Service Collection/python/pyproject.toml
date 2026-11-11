@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vehicle_service_collection_sdk"
+version = "1.0.0"
+description = """# Vehicle Service Collection\n\nThe Vehicle Service API provides a set of RESTful endpoints for managing vehicles. It supports full CRUD (Create, Read, Update, Delete) operations on vehicle records.\n\n## Base URL\nAll endpoints use the `{{baseUrl}}` variable. Ensure the active environment has `baseUrl` configured correctly.\n\n## Endpoints Overview\n\n| Method | Endpoint | Description |\n|--------|----------|-------------|\n| POST | /vehicles | Create a new vehicle |\n| GET | /vehicles | Retrieve all vehicles |\n| GET | /vehicles/:id | Retrieve a specific vehicle |\n| PATCH | /vehicles/:id | Update a vehicle |\n| DELETE | /vehicles/:id | Delete a vehicle |\n\n## Common Headers\n- `Content-Type: application/json` — Required for requests with a body\n- `Accept: application/json` — Expected response format"""
+readme = "PyPI_README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.31.0",
+    "pydantic>=2.0.0,<3.0.0"
+]

@@ -1,0 +1,11 @@
+# Profile: local
+# Activate with: --spring.profiles.active=local
+# Points the SDK at the Postman local mock server running on port 3000.
+vehicle:
+  sdk:
+    base-url: http://localhost:3000
+
+logging:
+  level:
+    com.vehicleservice: DEBUG
+    com.vehicleservicecollectionsdk: DEBUG

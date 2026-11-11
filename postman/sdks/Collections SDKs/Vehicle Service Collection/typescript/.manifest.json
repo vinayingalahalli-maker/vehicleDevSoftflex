@@ -1,0 +1,179 @@
+{
+  "sdkGenVersion": "3.23.0",
+  "resolvedGeneratorVersion": "3.23.0",
+  "config": {
+    "schemaVersion": "sdk-config-ir/v1",
+    "source": {
+      "specs": [
+        {
+          "specType": "postman"
+        }
+      ]
+    },
+    "target": {
+      "language": "typescript",
+      "sourceOrigin": "postman",
+      "sdkName": "vehicle-service-collection-sdk",
+      "sdkVersion": "1.0.0"
+    },
+    "api": {
+      "baseUrl": "",
+      "environments": [],
+      "environmentVariables": []
+    },
+    "client": {
+      "retry": {
+        "enabled": true,
+        "maxAttempts": 3,
+        "retryDelayMs": 150,
+        "maxDelayMs": 5000,
+        "jitterMs": 50,
+        "backoffFactor": 2,
+        "methods": [
+          "GET",
+          "PUT",
+          "DELETE",
+          "HEAD",
+          "OPTIONS"
+        ],
+        "maxRetryAfterDelayMs": 60000
+      },
+      "responseHeaders": false,
+      "multiTenant": false,
+      "additionalConstructorParameters": []
+    },
+    "package": {},
+    "output": {
+      "delivery": "zip",
+      "credentialResolution": "refs-only"
+    },
+    "docs": {},
+    "generation": {
+      "includeWatermark": false,
+      "ai": false,
+      "buildAllModels": false,
+      "inferServiceNames": false,
+      "includeDeprecatedOperations": true,
+      "multipleResponses": false,
+      "generateFullProject": false,
+      "devContainer": false,
+      "allowMockClient": false,
+      "serialization": {
+        "enumRepresentation": "union"
+      },
+      "language": {
+        "typescript": {
+          "httpClient": {
+            "name": "fetch"
+          },
+          "bundle": true,
+          "exportClassDefault": false
+        }
+      }
+    }
+  },
+  "files": [
+    "package.json",
+    "tsconfig.json",
+    "examples/tsconfig.json",
+    ".gitignore",
+    "scripts/prepublish.sh",
+    ".github/workflows/release.yml",
+    ".env.example",
+    "examples/package.json",
+    "examples/README.md",
+    "examples/src/index.ts",
+    "src/http/client.ts",
+    "src/http/types.ts",
+    "src/http/error.ts",
+    "src/http/handlers/terminating-handler.ts",
+    "src/http/handlers/response-validation-handler.ts",
+    "src/http/handlers/request-validation-handler.ts",
+    "src/http/transport/request.ts",
+    "src/http/transport/request-builder.ts",
+    "src/http/transport/request-fetch-adapter.ts",
+    "src/http/transport/transport-hook-adapter.ts",
+    "src/http/errors/throwable-error.ts",
+    "src/http/handlers/retry-handler.ts",
+    "src/services/vehicle-service-collection-sdk/models/create-a-vehicle-request.ts",
+    "documentation/models/CreateAVehicleRequest.md",
+    "src/services/base-service.ts",
+    "src/services/vehicle-service-collection-sdk/vehicle-service-collection-sdk-service.ts",
+    "src/index.ts",
+    "src/services/vehicle-service-collection-sdk/models/index.ts",
+    "src/services/vehicle-service-collection-sdk/index.ts",
+    "src/http/index.ts",
+    "src/http/handlers/handler-chain.ts",
+    "documentation/snippets/snippets.json",
+    "src/services/vehicle-service-collection-sdk/request-params.ts",
+    "src/http/handlers/hook-handler.ts",
+    "src/http/hooks/custom-hook.ts",
+    "src/http/hooks/hook.ts",
+    "src/http/environment.ts",
+    "src/http/serialization/base-serializer.ts",
+    "src/http/serialization/query-serializer.ts",
+    "src/http/serialization/path-serializer.ts",
+    "src/http/serialization/header-serializer.ts",
+    "src/http/serialization/cookie-serializer.ts",
+    "src/http/transport/types.ts",
+    "src/http/utils/runtime.ts",
+    "src/http/utils/line-decoder.ts",
+    "src/http/utils/response-matcher.ts",
+    "src/http/utils/content-type.ts",
+    "src/http/errors/validation-error.ts",
+    "documentation/services/VehicleServiceCollectionSdkService.md",
+    "README.md"
+  ],
+  "fileHashes": {
+    ".env.example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".github/workflows/release.yml": "97b1ef13d02af6b39c9b8209f007b6778e64c42efd6b74827588988e5e7bf877",
+    ".gitignore": "5f515684cbf8243009414e638b28e93a70a884b81e3e16c38bb01124419e44b2",
+    "README.md": "9402c5ce91822c0550b67da27438e1ac887429b9d805fdc8126348947f36b3c6",
+    "documentation/models/CreateAVehicleRequest.md": "ce7c9893f256d29a18958a840b79c11cb0fa21afa29053d3055881e5ec9b9e06",
+    "documentation/services/VehicleServiceCollectionSdkService.md": "c3da8286ddb875471dde7e286511ed507cbf4bdae3562279a54a03e8ec83c1b7",
+    "documentation/snippets/snippets.json": "963536afdb29f77da08edca4f297a33c3d73a10fe634b33f6be836d3dd183223",
+    "examples/README.md": "bc61ced0533743e06da46b4522f809f384bf6edfa6efc992c388b395c0f506fd",
+    "examples/package.json": "2892e6f8a65c9195c3086a3730050ee774f93ecef8705d063ae62ad40b2e35d3",
+    "examples/src/index.ts": "c4039b55da6411fb66f52a3269872a1c1e979b0b0de3407975c149d125daf2c9",
+    "examples/tsconfig.json": "bdb522404dc9d1f590917157ea54e49bb6bfa301ef470c190b8b2c7119ed69c4",
+    "package.json": "dacea940a2a575b4648d7eba75c9d081ccbe870e929a185a5203b7215b5f2429",
+    "scripts/prepublish.sh": "651cd87546cc25d69210f55dc4310d47007c53b719da1da8b3bd9acb098defcf",
+    "src/http/client.ts": "349c2725fbbeac67a4479fe1be2b8c0c3788ac8368ef722e3d1fdcd686f68717",
+    "src/http/environment.ts": "dfb1c6c033f4eae59c6e47348fd9fddeae5e9266bfaccb75dc58291336909fa2",
+    "src/http/error.ts": "095eb2f095a7868a5a1fcb4cf543560e143c06766c9693f9efb67b0601c242a5",
+    "src/http/errors/throwable-error.ts": "c23b141df9759e22cef65788738e3035a25b8d956ee5f873eddaf528a835ba6c",
+    "src/http/errors/validation-error.ts": "8835718fafeca5327ada4e6cbb7859f40d7460b98973812f2a012017bde8e2c8",
+    "src/http/handlers/handler-chain.ts": "7963ae4f81949a07b9265abd5c9aeef8f7b6d99260874f9e8d6f82a916d85699",
+    "src/http/handlers/hook-handler.ts": "1b81c92bbde0cc41d31a1f1bd9e708a7806135b30755b794204324cb485f026f",
+    "src/http/handlers/request-validation-handler.ts": "2ca7c33bfbee8cef6fac689995223822e7c94bd923f195d8eed9e3d30196b0c9",
+    "src/http/handlers/response-validation-handler.ts": "e54d5c4a77952887bd2be918b4077e4ebc0183ed33fbdfb8fc26c539ea4ca703",
+    "src/http/handlers/retry-handler.ts": "da5a8bafd513e750582935534e26100ca6d43cc25f8925e8f207240e114fa360",
+    "src/http/handlers/terminating-handler.ts": "8b820d772559c271507977bd3bc59b0afd979f5fc24397419dcb97059a3b076c",
+    "src/http/hooks/custom-hook.ts": "906e418d5f24ae314500dea157f0b101a179ff3c16ef8dbb158cce51ed306ee7",
+    "src/http/hooks/hook.ts": "6548e301970d9e7927540b554548d22a9bd5fd47c2bfd7136e9efcc186f8ffff",
+    "src/http/index.ts": "b8a007df51c54f0c9d55051963083dd347816921a6ec7d88f09c35d70fb9919c",
+    "src/http/serialization/base-serializer.ts": "91fb56323ba2f45af568ee4a02f7657bb7aac29112db52aa3ca71080d8837dce",
+    "src/http/serialization/cookie-serializer.ts": "f9681a88bf37e973be4b563a052dc48cb7d2c4ae8b90165ea9e9031d024400b3",
+    "src/http/serialization/header-serializer.ts": "b4c97918a23ee9c2d19996de23433e5d656f68eb5c44b77e454066d64bdd4293",
+    "src/http/serialization/path-serializer.ts": "e6f269f8d87aa3e3119e300899b118a7b03a3fe22c738b19a8ecfca2e750c91d",
+    "src/http/serialization/query-serializer.ts": "bc2484850e2a047ca4c5112b6782f44b73019c7e3bd6825500aa5f080383b62a",
+    "src/http/transport/request-builder.ts": "b946067d6404dae3d3cd4ed26737dc6c8f4ea0bdc07dad956e363a1b0d52434d",
+    "src/http/transport/request-fetch-adapter.ts": "4f93b414d86e3f7ad0f5ac15eee1365134a473bc5d50f0f80e7ec30acd8c3edb",
+    "src/http/transport/request.ts": "1a18d73c0fea7ea6de777849c6084e7908c9a53c3dde36517f96a86d2a683543",
+    "src/http/transport/transport-hook-adapter.ts": "0c706d8da3456825dbdedbe8ffb24350f0dfa4f9aaf4cf13c3bbcf37e5ff54ed",
+    "src/http/transport/types.ts": "4e37393ff786526d6d6992822e30b9666a0e4f422ff080f51b7b62ef5cc1f304",
+    "src/http/types.ts": "b378aa01376cf267bf0ab426df47ad249624f563b2d2857e0dc7722dbbc6074e",
+    "src/http/utils/content-type.ts": "760c551874f4c5ee963f90f157431567619502ff8bc0f7f86131a973000d2031",
+    "src/http/utils/line-decoder.ts": "c01e7f169a4632664f3cf51acba5ac87e792aa227a760ebc89b0df2e35b28910",
+    "src/http/utils/response-matcher.ts": "7870d29287e4f887348a25bf7bb2c0c6cce076baa6442c1787278bc883dd5a4c",
+    "src/http/utils/runtime.ts": "5dfe246c6eeca09e4e0e243951a86fe0741bb49e399b344515e9876ff92d4021",
+    "src/index.ts": "6132f6722fdef6b181d9aad1bcf8a5b57419f33b0b51115891bbb4ebf15ef79f",
+    "src/services/base-service.ts": "f331909d3460998094a5f29a33c8f7838fef44e50b410a1bcb0de2ccb65274f0",
+    "src/services/vehicle-service-collection-sdk/index.ts": "df59e5abfffdf00f60fa12aec11bf13b7196dde05206928e8484639524b21732",
+    "src/services/vehicle-service-collection-sdk/models/create-a-vehicle-request.ts": "f24e2a16fb30abd6e4c2efcdd98c3388cafe14da60583ab9a4fe3c3551498189",
+    "src/services/vehicle-service-collection-sdk/models/index.ts": "705e6fe316c9b6faa266bf5988c341828acda12d479a310a3c274312e06a149d",
+    "src/services/vehicle-service-collection-sdk/request-params.ts": "947b29a09de92ff2e57d02cf4a1b07b337d34e1209561b839c4397477861ed4e",
+    "src/services/vehicle-service-collection-sdk/vehicle-service-collection-sdk-service.ts": "ddb455c745e2c9812151c81736ac773682d5107e3006271c8364ad35a949e536",
+    "tsconfig.json": "bdb522404dc9d1f590917157ea54e49bb6bfa301ef470c190b8b2c7119ed69c4"
+  }
+}

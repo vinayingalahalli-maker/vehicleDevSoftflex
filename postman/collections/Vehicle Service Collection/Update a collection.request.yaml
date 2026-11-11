@@ -1,0 +1,108 @@
+$kind: http-request
+description: |-
+  ## Update a Vehicle
+
+  Partially updates an existing vehicle record using its unique identifier. Only the fields provided in the request body will be updated.
+
+  **Method:** `PATCH`  
+  **Endpoint:** `{{baseUrl}}/vehicles/:id`
+
+  ### Path Parameters
+  | Parameter | Type | Required | Description |
+  |-----------|------|----------|-------------|
+  | id | string | Yes | The unique identifier of the vehicle to update. |
+
+  ### Request Headers
+  | Header | Value | Description |
+  |--------|-------|-------------|
+  | Content-Type | application/json | Required. Specifies the request body format. |
+  | Accept | application/json | Expected response format. |
+
+  ### Request Body
+  Send a JSON object with one or more of the following fields to update:
+
+  | Field | Type | Required | Description |
+  |-------|------|----------|-------------|
+  | nickName | string | No | Updated friendly name for the vehicle. |
+  | vin | string | No | Updated Vehicle Identification Number. |
+  | make | string | No | Updated manufacturer name. |
+  | model | string | No | Updated model name. |
+  | year | string | No | Updated manufacturing year. |
+  | miles | number | No | Updated odometer reading in miles. |
+
+  **Example Request Body:**
+  ```json
+  {
+    "nickName": "The Lisa Marie",
+    "vin": "4M2DV11W4RDJ53329",
+    "make": "Mercury",
+    "model": "Villager",
+    "year": "1994",
+    "miles": 159999
+  }
+  ```
+
+  ### Responses
+  | Status Code | Description |
+  |-------------|-------------|
+  | 200 | Success — returns the updated vehicle object. |
+  | 400 | Bad request — the request body is malformed or contains invalid values. |
+  | 500 | Unexpected server error. |
+url: "{{baseUrl}}/vehicles/:id"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: "1"
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: json
+  content: |-
+    {
+      "nickName": "The Lisa Marie",
+      "vin": "4M2DV11W4RDJ53329",
+      "make": "Mercury",
+      "model": "Villager",
+      "year": "1994",
+      "miles": 159999
+    }
+  $type: |-
+    {
+      "type": "object",
+      "properties": {
+        "nickName": {
+          "type": "string"
+        },
+        "vin": {
+          "type": "string"
+        },
+        "make": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "year": {
+          "type": "string"
+        },
+        "miles": {
+          "type": "integer"
+        }
+      }
+    }
+settings: {}
+examples: ./.resources/Update a collection.resources/examples
+order: 3000
